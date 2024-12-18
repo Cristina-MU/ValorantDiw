@@ -1,0 +1,11 @@
+Model Information:
+* title:	Valorant Raze's boombot
+* source:	https://sketchfab.com/3d-models/valorant-razes-boombot-222e883e92444b6ba26909ca222a6693
+* author:	Zuza Kossowska (https://sketchfab.com/zuza707)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Valorant Raze's boombot" (https://sketchfab.com/3d-models/valorant-razes-boombot-222e883e92444b6ba26909ca222a6693) by Zuza Kossowska (https://sketchfab.com/zuza707) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

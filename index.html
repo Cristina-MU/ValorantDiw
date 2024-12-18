@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorant</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="theme.js"></script>
+    <script defer src="index.js"></script>
+    
+</head>
+<body class="bg-gray-800 text-white">
+
+    <header class="flex justify-between items-center w-full px-4 py-2 bg-gray-800">
+        <img alt="Valorant logo" class="h-12 md:h-10 lg:h-12 lg:ml-8" src="img/minilogo.png" />
+    
+        <div class="relative md:hidden lg:hidden">
+            <i id="menu-toggle" class="fas fa-bars text-white text-5xl cursor-pointer"></i>
+    
+            <nav id="dropdown-menu" class="hidden absolute right-0 mt-2 w-48 bg-gray-800 rounded shadow-lg z-50">
+                <ul class="flex flex-col p-2 space-y-2">
+                    <li><a href="index.html" class="block text-white py-2 px-4 hover:bg-gray-700 rounded">HOME</a></li>
+                    <li><a href="agents.html" class="block text-white py-2 px-4 hover:bg-gray-700 rounded">AGENTS</a></li>
+                    <li><a href="maps.html" class="block text-white py-2 px-4 hover:bg-gray-700 rounded">MAPS</a></li>
+                    <li><a href="weapons.html" class="block text-white py-2 px-4 hover:bg-gray-700 rounded">WEAPONS</a></li>
+                </ul>
+            </nav>
+        </div>
+    
+        <nav class="hidden md:flex lg:flex space-x-6">
+            <a href="index.html" class="block text-white py-2 px-4 hover:bg-gray-700 rounded md:text-2xl lg:text-2xl">HOME</a>
+            <a href="agents.html" class="block text-white py-2 px-4 hover:bg-gray-700 rounded md:text-2xl lg:text-2xl">AGENTS</a>
+            <a href="maps.html" class="block text-white py-2 px-4 hover:bg-gray-700 rounded md:text-2xl lg:text-2xl">MAPS</a>
+            <a href="weapons.html" class="block text-white py-2 px-4 hover:bg-gray-700 rounded md:text-2xl lg:text-2xl">WEAPONS</a>
+        </nav>
+    
+        <label id="theme-toggle" class="relative inline-flex items-center cursor-pointer lg:mr-8">
+            <input class="sr-only peer" value="" type="checkbox" id="theme-toggle-checkbox" />
+            <div
+                class="w-24 h-12 md:h-10 lg:h-12 lg:w-24 rounded-full ring-0 peer duration-500 outline-none bg-gray-200 overflow-hidden before:flex before:items-center before:justify-center after:flex after:items-center after:justify-center before:content-['☀️'] before:absolute before:h-10 before:w-10 before:top-1/2 before:bg-white before:rounded-full before:left-1 before:-translate-y-1/2 before:transition-all before:duration-700 peer-checked:before:opacity-0 peer-checked:before:rotate-90 peer-checked:before:-translate-y-full shadow-lg shadow-gray-400 peer-checked:shadow-lg peer-checked:shadow-gray-700 peer-checked:bg-[#383838] after:content-['🌑'] after:absolute after:bg-[#1d1d1d] after:rounded-full after:top-[4px] after:right-1 after:translate-y-full after:w-10 after:h-10 after:opacity-0 after:transition-all after:duration-700 peer-checked:after:opacity-100 peer-checked:after:rotate-180 peer-checked:after:translate-y-0"
+            ></div>
+        </label>
+    </header>
+   
+    <main class="flex flex-col items-center">
+        <div class="relative w-full">
+            <img id="imgHome" alt="Valorant character" class="w-full" src="img/fondoHome.png" />
+        </div>
+    
+        <!-- Agents Section -->
+        <section class="w-full py-8 px-4 grid gap-4 items-center bg-cover bg-center md:grid-cols-2 lg:min-h-[768px]" style="background-image: url('img/fondorojo.png');">
+            <!-- Texto y botón -->
+            <div class="text-center md:text-center">
+                <h2 class="text-6xl font-bold mb-8 lg:text-8xl lg:pb-9">Explore our agents</h2>
+                <button class="bg-black text-white py-5 px-8 rounded-3xl lg:text-4xl lg:m-5"><a href="agents.html">VIEW ALL AGENTS</a></button>
+            </div>
+            <!-- Modelo 3D -->
+            <div class="flex justify-center">
+                <model-viewer
+                    src="modeloAgent/scene.gltf"
+                    alt="Modelo Agent"
+                    auto-rotate
+                    camera-controls
+                    ar
+                    ios-src="modeloAgent/scene.gltf"
+                    style="width: 100%; height: 400px; max-width: 400px; ">
+                </model-viewer>
+            </div>
+        </section>
+        
+        <!-- Maps Section -->
+        <section class="w-full py-8 px-4 grid gap-4 items-center bg-cover bg-center md:grid-cols-2 lg:min-h-[768px]" style="background-image: url('img/whitebg.jpg');">
+            <div class="text-center md:text-center">
+                <h2 class="text-black text-6xl font-bold mb-8 lg:text-8xl lg:pb-9">Explore our maps</h2>
+                <button class="bg-red-500 text-white py-5 px-8 rounded-3xl lg:text-4xl lg:m-5"><a href="maps.html">VIEW ALL MAPS</a></button>
+            </div>
+            <div class="flex justify-center">
+                <model-viewer
+                    src="modeloMap/scene.gltf"
+                    alt="Modelo Map"
+                    auto-rotate
+                    camera-controls
+                    ar
+                    ios-src="modeloMap/scene.gltf"
+                    style="width: 100%; height: 400px; max-width: 400px;">
+                </model-viewer>
+            </div>
+        </section>
+    
+        <!-- Weapons Section -->
+        <section class="w-full py-8 px-4 grid gap-4 items-center bg-cover bg-center md:grid-cols-2 lg:min-h-[768px]" style="background-image: url('img/fondorojo.png');">
+            <div class="text-center md:text-center">
+                <h2 class="text-6xl font-bold mb-8 lg:text-8xl lg:pb-9">Explore our weapons</h2>
+                <button class="bg-black text-white py-5 px-8 rounded-3xl lg:text-4xl lg:m-5"><a href="weapons.html">VIEW ALL WEAPONS</a></button> 
+            </div>
+            <div class="flex justify-center">
+                <model-viewer
+                    src="modeloWeapon/scene.gltf"
+                    alt="Modelo Weapon"
+                    auto-rotate
+                    camera-controls
+                    ar
+                    ios-src="modeloWeapon/scene.gltf"
+                    style="width: 100%; height: 400px; max-width: 400px;">
+                </model-viewer>
+            </div>
+        </section>
+    </main>
+    
+
+    <footer class="bg-gray-800 p-4 w-full flex flex-col items-center md:flex-row md:justify-between md:items-center md:px-8 lg:flex-row  lg:justify-between lg:items-center lg:px-8">
+        <img alt="Valorant text logo" class="h-14 py-0 my-0" src="img/nombrelogowhite.png" />
+        
+        <div class="flex space-x-6 pb-4 lg:pb-0 text-white text-4xl lg:space-x-9 lg:text-4xl">
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-discord"></i>
+        </div>
+    </footer>
+    
+</body>
+</html>
